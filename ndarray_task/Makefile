@@ -1,5 +1,6 @@
 CC = g++
 CFLAGS = -std=c++11 -Wall -pedantic
+SOURCES = main.cpp
 
 ifeq ($(OS), Windows_NT)
 	RM = del
@@ -11,11 +12,8 @@ endif
 
 
 
-all: main.o
-	$(CC) $(CFLAGS) -o $(TARGET) main.o
-
-main.o: main.cpp
-	$(CC) -c main.cpp
+all:
+	$(CC) $(CFLAGS) -o $(TARGET) $(SOURCES)
 
 run: all
 	$(TARGET)
