@@ -20,4 +20,3 @@ run: all
 
 clean:
 	$(RM) $(TARGET)
-	$(RM) *.o
